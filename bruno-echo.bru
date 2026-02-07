@@ -4,9 +4,9 @@ meta {
   seq: 1
 }
 
-get {
+post {
   url: https://echo.usebruno.com
-  body: none
+  body: json
   auth: none
 }
 
@@ -14,9 +14,11 @@ headers {
   Content-Type: application/json
 }
 
-params:query {
-  foo: bar
-  message: Hello from Bruno
+body:json {
+  {
+    "message": "hello from bruno",
+    "env": "test"
+  }
 }
 
 tests {
