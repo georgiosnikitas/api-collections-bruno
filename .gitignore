@@ -1,0 +1,15 @@
+# Bruno Collections
+
+# Environment files (may contain API keys, tokens, or other secrets)
+.env
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Bruno cache and temporary files
+.bruno/
+node_modules/
+*.log

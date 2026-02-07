@@ -1,0 +1,30 @@
+meta {
+  name: Bruno Echo
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://echo.usebruno.com
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:query {
+  foo: bar
+  message: Hello from Bruno
+}
+
+tests {
+  test("Status code is 200", function() {
+    expect(res.status).to.equal(200);
+  });
+  
+  test("Response has args", function() {
+    expect(res.body.args).to.be.an('object');
+  });
+}
